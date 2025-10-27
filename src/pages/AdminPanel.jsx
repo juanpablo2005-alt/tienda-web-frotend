@@ -16,7 +16,7 @@ export default function AdminPanel() {
         const fetchData = async () => {
             try {
                 // Productos
-                const resProd = await fetch("http://localhost:4000/api/admin/products", {
+                const resProd = await fetch("https://tienda-web-backend.vercel.app/api/admin/products", {
                     headers: { Authorization: `Bearer ${adminToken}` },
                 });
 
@@ -31,7 +31,7 @@ export default function AdminPanel() {
                 setProducts(dataProd);
 
                 // Dashboard (ventas totales y por usuario)
-                const resDash = await fetch("http://localhost:4000/api/admin/dashboard", {
+                const resDash = await fetch("https://tienda-web-backend.vercel.app/api/admin/dashboard", {
                     headers: { Authorization: `Bearer ${adminToken}` },
                 });
 
@@ -164,3 +164,4 @@ export default function AdminPanel() {
         </div>
     );
 }
+
