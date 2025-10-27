@@ -1,0 +1,137 @@
+/* Estilo base para pantallas móviles */
+body {
+    background: linear-gradient(to bottom, #f8fbff, #d9e8ff);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal en todas las vistas */
+.container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px 20px;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Títulos principales */
+.title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3b82f6;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Botón secundario (enlaces tipo texto) */
+button.link {
+    background: none;
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+/* Tarjetas de producto (Home) */
+.product-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+.product-card.selected {
+    border-color: #2563eb;
+    transform: scale(1.03);
+}
+
+/* Grilla de productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Checkout */
+.checkout-summary {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.checkout-summary p {
+    margin: 6px 0;
+}
+
+/* Botón de logout */
+.logout-btn {
+    background-color: #ef4444;
+}
+
+.logout-btn:hover {
+    background-color: #dc2626;
+}
